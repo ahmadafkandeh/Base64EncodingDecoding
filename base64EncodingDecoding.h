@@ -2,6 +2,9 @@
 #define BASE64ENCODEINGDECODING
 
 #include <stdio.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 enum base64_encode_mode
 {
@@ -11,5 +14,9 @@ enum base64_encode_mode
 
 int base64_decode(char mode, char* data, size_t len, unsigned char **out);
 int base64_encode(char mode, unsigned char *data, size_t len, char **outbuffer);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif //BASE64_32ENCODEINGDECODING
